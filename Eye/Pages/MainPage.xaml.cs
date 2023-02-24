@@ -53,10 +53,10 @@ namespace Eye.Pages
         public void Filter()
         {
             var searchingText = tbSearch.Text.ToLower();
-            var sorting = Sortings[cbSorting.SelectedItem as string];
+            var sorting = cbSorting.SelectedItem as Sortings;
             var agentType = cbAgentTypes.SelectedItem as AgentType;
 
-            if (sorting == null || agentType == null)
+            if (sorting != null || agentType == null)
                 return;
 
             FilteredAgents = Agents.FindAll(agent => agent.Title.ToLower().Contains(searchingText));
