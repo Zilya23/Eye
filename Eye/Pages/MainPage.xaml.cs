@@ -49,37 +49,8 @@ namespace Eye.Pages
 
 
         }
-
-        private void btnEditPriority_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnAddAgent_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new AgentPage());
-        }
-
-        private void lvAgents_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void lvAgents_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void cbAgentTypes_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void cbSorting_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-        public void Filter(bool filtersChanged)
+        
+        public void Filter()
         {
             var searchingText = tbSearch.Text.ToLower();
             var sorting = Sortings[cbSorting.SelectedItem as string];
